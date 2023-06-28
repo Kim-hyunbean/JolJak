@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="629dp"
+        android:layout_weight="1"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/todayWeather"
+            android:layout_width="157dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="오늘의 날씨"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/todayimage"
+            app:layout_constraintEnd_toEndOf="@+id/todayimage"
+            app:layout_constraintStart_toStartOf="@+id/todayimage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="97dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="204dp"
+            android:gravity="center"
+            android:text="온도"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/temtext"
+            app:layout_constraintEnd_toStartOf="@+id/humidity"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/temtext"
+            android:layout_width="97dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="204dp"
+            android:layout_marginBottom="92dp"
+            android:gravity="center"
+            android:text="00℃"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/humiditytext"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="97dp"
+            android:layout_height="22dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="습도"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/humiditytext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/temperature"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/pm"
+            android:layout_width="97dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="88dp"
+            android:gravity="center"
+            android:text="미세먼지"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pmtext"
+            app:layout_constraintEnd_toStartOf="@+id/pmstate"
+            app:layout_constraintStart_toStartOf="@+id/pmtext"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/pmstate"
+            android:layout_width="80dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="27dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center|left"
+            android:text="매우좋음"
+            android:textColor="#000000"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toTopOf="@+id/humidity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pmtext"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/YYMMEE"
+            android:layout_width="212dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="00월 00일 0요일"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/todayimage"
+            android:layout_width="142dp"
+            android:layout_height="139dp"
+            android:layout_marginStart="36dp"
+            app:layout_constraintBottom_toTopOf="@+id/todaytext"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/todayWeather"
+            app:srcCompat="@drawable/clear"
+            tools:ignore="MissingConstraints"
+            tools:srcCompat="@drawable/clear" />
+
+        <TextView
+            android:id="@+id/pmtext"
+            android:layout_width="97dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="204dp"
+            android:gravity="center"
+            android:text="00.0㎍/㎥"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/temperature"
+            app:layout_constraintEnd_toStartOf="@+id/pmstate"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/humiditytext"
+            android:layout_width="97dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="92dp"
+            android:gravity="center"
+            android:text="00%"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/temtext"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/todaytext"
+            android:layout_width="168dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="2dp"
+            android:gravity="center"
+            android:text="날씨"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/YYMMEE"
+            app:layout_constraintEnd_toEndOf="@+id/todayimage"
+            app:layout_constraintStart_toStartOf="@+id/todayimage"
+            app:layout_constraintTop_toBottomOf="@+id/todayimage"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/iblight"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/confirm_btn"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/ibOUT"
+            app:layout_constraintEnd_toStartOf="@+id/ibfuntion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lightcontrol"
+            tools:ignore="SpeakableTextPresentCheck"
+            />/>
+
+        <ImageButton
+            android:id="@+id/ibfuntion"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="75dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/confirm_btn"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/ibIN"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iblight"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/multicontrol"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/ibOUT"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginBottom="29dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/confirm_btn"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/ibIN"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iblight"
+            app:srcCompat="@drawable/outicon"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/ibIN"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginBottom="29dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/confirm_btn"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ibOUT"
+            app:layout_constraintTop_toBottomOf="@+id/ibfuntion"
+            app:srcCompat="@drawable/inicon"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="406dp"
+            android:layout_height="57dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/honamlogo2"
+            tools:srcCompat="@drawable/honamlogo2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#eeeeee"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <!-- 타이틀바 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/material_dynamic_primary80"
+            android:gravity="center"
+            android:text="귀가 설정"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <!-- //end 타이틀바 -->
+
+    <!-- Notice -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <CheckBox
+            android:id="@+id/openFan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="환풍기"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/openWind"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="선풍기"
+            android:textColor="@color/black" />
+
+        <CheckBox
+            android:id="@+id/openWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="창문"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <!-- Notice -->
+
+    <View
+        android:background="#66bdbdbd"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <!-- 닫기 버튼 -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="#00000000"
+            android:gravity="center"
+            android:onClick="mOnClose"
+            android:padding="16dp"
+            android:text="확인"
+            android:textColor="@color/material_dynamic_primary80"
+            android:textSize="15sp" />
+    </LinearLayout>
+    <!--// 닫기 버튼 -->
+</LinearLayout>
